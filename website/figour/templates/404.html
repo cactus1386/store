@@ -1,0 +1,53 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>صفحه‌ی 404</title>
+    <!-- fontAwesome -->
+    <link rel="stylesheet" href="{% static 'assets/css/font-awesome.min.css '%}">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="{% static 'assets/bootstrap/css/bootstrap.min.css'%}">
+    <!-- CSS Implementing Plugins -->
+    <link rel="stylesheet" href="{% static 'assets/css/plugins/nice-select.css'%}">
+    <link rel="stylesheet" href="{% static 'assets/css/plugins/swiper-bundle.min.css'%}">
+    <link rel="stylesheet" href="{% static 'assets/css/plugins/noUISlider.min.css'%}">
+    <!-- mainStyle -->
+    <link rel="stylesheet" href="{% static 'assets/css/main.css'%}">
+    <link rel="stylesheet" href="{% static 'assets/css/responsive.css'%}">
+</head>
+
+<body>
+    <!-- content -->
+    <main class="content mb-0">
+        <div class="content-404-inner">
+            <div class="icon-wrap">
+                <img src="{% static 'assets/images/404.png'%}" alt="404">
+            </div>
+            <div class="content-404">
+                <h1>صفحه مورد نظر یافت نشد که به چند دلیل این اتفاق افتاده است:</h1>
+                <a href="/" class="gotoback-404">بازگشت به صفحه اصلی</a>
+            </div>
+        </div>
+    </main>
+    <!-- content -->
+</body>
+<!-- JS Global Compulsory -->
+<script src="{% static 'assets/js/plugins/jquery-3.6.0.min.js'%}"></script>
+<script src="{% static 'assets/js/plugins/popper.min.js' %}"></script>
+<script src="{% static 'assets/bootstrap/js/bootstrap.min.js' %}"></script>
+<!-- JS Implementing Plugins -->
+<script src="{% static 'assets/js/plugins/jquery.nice-select.min.js' %}"></script>
+<script src="{% static 'assets/js/plugins/swiper-bundle.min.js' %}"></script>
+<script src="{% static 'assets/js/plugins/countdown.min.js' %}"></script>
+<script src="{% static 'assets/js/plugins/jquery.countdown.min.js' %}"></script>
+<script src="{% static 'assets/js/plugins/theia-sticky-sidebar.min.js' %}"></script>
+<script src="{% static 'assets/js/plugins/nouislider.min.js' %}"></script>
+<script src="{% static 'assets/js/plugins/wNumb.js'%}"></script>
+<!-- JS Template -->
+<script src="{% static 'assets/js/main.js'%}"></script>
+
+</html>

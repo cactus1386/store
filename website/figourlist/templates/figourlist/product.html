@@ -1,0 +1,983 @@
+{% extends "base.html" %}
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+{% block content %}
+<body>
+
+    <!-- content -->
+    <main class="content mt-3">
+        <div class="container">
+            <nav aria-label="breadcrumb" class="breadcrumb-nav">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">????</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">???????</li>
+                </ol>
+            </nav>
+            <div class="sidebar-listing">
+                    <div class="col-md-5">
+                    <img src="{% static 'assets/images/banner/banner1.jpg'%}"    
+                    alt="slider-heading">
+                        </div>
+                        <div class="col-md-12"> 
+                            <h1>ahmad</h1>
+                        </div>
+                        <div class="js-listing">
+                            <div class="dropdown">
+                                <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                                    data-toggle="dropdown" aria-expanded="false">
+                                    ???? ???? ??????
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                    <ul class="nav nav-tabs sort-tabs-options sort-main" id="myTab" role="tablist">
+                                        <li class="nav-item" role="presentation">
+                                            <a class="nav-link active show" id="Most-visited-tab" data-toggle="tab"
+                                                href="#Most-visited" role="tab" aria-controls="Most-visited"
+                                                aria-selected="true">????????????</a>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                            <a class="nav-link" id="Bestselling-tab" data-toggle="tab"
+                                                href="#Bestselling" role="tab" aria-controls="Bestselling"
+                                                aria-selected="false">????????????</a>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                            <a class="nav-link" id="Most-Popular-tab" data-toggle="tab"
+                                                href="#Most-Popular" role="tab" aria-controls="Most-Popular"
+                                                aria-selected="false">??????????</a>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                            <a class="nav-link" id="newest-tab" data-toggle="tab" href="#newest"
+                                                role="tab" aria-controls="newest" aria-selected="false">????????</a>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                            <a class="nav-link" id="cheapest-tab" data-toggle="tab" href="#cheapest"
+                                                role="tab" aria-controls="cheapest" aria-selected="false">??????????</a>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                            <a class="nav-link" id="most-expensive-tab" data-toggle="tab"
+                                                href="#most-expensive" role="tab" aria-controls="most-expensive"
+                                                aria-selected="false">?????????</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="products">
+                                <div class="tab-content" id="myTabContent">
+                                    <div class="tab-pane fade show active" id="Most-visited" role="tabpanel"
+                                        aria-labelledby="Most-visited-tab">
+                                        {% for item in product %}
+                                            <div class="col-lg-3 col-md-4 col-xs-12 fr">
+                                                <div class="product-card">
+                                                    <div class="product-image-area">
+                                                        <a href="#" class="product-image">
+                                                            <div class="product-label">
+                                                                <span>{{item.Discount}}%</span>
+                                                            </div>
+                                                            <img src="{{ item.photo.url }}"
+                                                                alt="product">
+                                                        </a>
+                                                    </div>
+                                                    <div class="product-detail-area">
+                                                        <div class="price">
+                                                            <del>
+                                                                <span class="price-amount">{{item.price}}
+                                                                    <span class="price-currencySymbol">تومان</span>
+                                                                </span>
+                                                            </del>
+                                                            <ins>
+                                                                <span class="price-amount">{{item.second_price}}
+                                                                    <span class="price-currencySymbol">تومان</span>
+                                                                </span>
+                                                            </ins>
+                                                        </div>
+                                                        <h3 class="product-name">
+                                                            <a href="#">{{item.name}}</a>
+                                                        </h3>
+                                                        <div class="actions">
+                                                            <ul class="add-to-links">
+                                                                <li>
+                                                                    <div class="add-to-wishlist">
+                                                                        <a href="#wishlist" title="افزودن به علاقه مندی ها">
+                                                                            <i class="fal fa-heart"></i>
+                                                                        </a>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="add-to-compare">
+                                                                        <a href="#compare" title="مقایسه">
+                                                                            <i class="fal fa-random"></i>
+                                                                        </a>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="add-to-cart">
+                                                                        <a href="#cart" title="افزودن به سبد">
+                                                                            <i class="fal fa-shopping-cart"></i>
+                                                                        </a>
+                                                                    </div>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        {% endfor %}
+                                    </div>
+                                    <div class="tab-pane fade" id="Bestselling" role="tabpanel"
+                                        aria-labelledby="Bestselling-tab">
+                                        <div class="col-lg-3 col-md-4 col-xs-12 fr">
+                                            <div class="product-card">
+                                                <div class="product-image-area">
+                                                    <a href="#" class="product-image">
+                                                        <div class="product-label">
+                                                            <span>3%</span>
+                                                        </div>
+                                                        <img src="assets/images/product/pocox3.webp" alt="product">
+                                                    </a>
+                                                </div>
+                                                <div class="product-detail-area">
+                                                    <div class="price">
+                                                        <del>
+                                                            <span class="price-amount">71,000,000
+                                                                <span class="price-currencySymbol">?????</span>
+                                                            </span>
+                                                        </del>
+                                                        <ins>
+                                                            <span class="price-amount">69,000,000
+                                                                <span class="price-currencySymbol">?????</span>
+                                                            </span>
+                                                        </ins>
+                                                    </div>
+                                                    <h3 class="product-name">
+                                                        <a href="#">???? ?????? ??? ??? iPhone 12 A2404 ?? ???? ????
+                                                            ?????
+                                                            128 ????????</a>
+                                                    </h3>
+                                                    <div class="actions">
+                                                        <div class="star-rating">
+                                                            <span class="star active">
+                                                                <i class="fal fa-star"></i>
+                                                            </span>
+                                                            <span class="star active">
+                                                                <i class="fal fa-star"></i>
+                                                            </span>
+                                                            <span class="star active">
+                                                                <i class="fal fa-star"></i>
+                                                            </span>
+                                                            <span class="star active">
+                                                                <i class="fal fa-star"></i>
+                                                            </span>
+                                                            <span class="star">
+                                                                <i class="fal fa-star"></i>
+                                                            </span>
+                                                        </div>
+                                                        <ul class="add-to-links">
+                                                            <li>
+                                                                <div class="add-to-wishlist">
+                                                                    <a href="#wishlist" title="?????? ?? ????? ???? ??">
+                                                                        <i class="fal fa-heart"></i>
+                                                                    </a>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="add-to-compare">
+                                                                    <a href="#compare" title="??????">
+                                                                        <i class="fal fa-random"></i>
+                                                                    </a>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="add-to-cart">
+                                                                    <a href="#cart" title="?????? ?? ???">
+                                                                        <i class="fal fa-shopping-cart"></i>
+                                                                    </a>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-md-4 col-xs-12 fr">
+                                            <div class="product-card">
+                                                <div class="product-image-area">
+                                                    <a href="#" class="product-image">
+                                                        <div class="product-label">
+                                                            <span>3%</span>
+                                                        </div>
+                                                        <img src="assets/images/product/apple-iphone12.webp"
+                                                            alt="product">
+                                                    </a>
+                                                </div>
+                                                <div class="product-detail-area">
+                                                    <div class="price">
+                                                        <del>
+                                                            <span class="price-amount">71,000,000
+                                                                <span class="price-currencySymbol">?????</span>
+                                                            </span>
+                                                        </del>
+                                                        <ins>
+                                                            <span class="price-amount">69,000,000
+                                                                <span class="price-currencySymbol">?????</span>
+                                                            </span>
+                                                        </ins>
+                                                    </div>
+                                                    <h3 class="product-name">
+                                                        <a href="#">???? ?????? ??? ??? iPhone 12 A2404 ?? ???? ????
+                                                            ?????
+                                                            128 ????????</a>
+                                                    </h3>
+                                                    <div class="actions">
+                                                        <div class="star-rating">
+                                                            <span class="star active">
+                                                                <i class="fal fa-star"></i>
+                                                            </span>
+                                                            <span class="star active">
+                                                                <i class="fal fa-star"></i>
+                                                            </span>
+                                                            <span class="star active">
+                                                                <i class="fal fa-star"></i>
+                                                            </span>
+                                                            <span class="star active">
+                                                                <i class="fal fa-star"></i>
+                                                            </span>
+                                                            <span class="star">
+                                                                <i class="fal fa-star"></i>
+                                                            </span>
+                                                        </div>
+                                                        <ul class="add-to-links">
+                                                            <li>
+                                                                <div class="add-to-wishlist">
+                                                                    <a href="#wishlist" title="?????? ?? ????? ???? ??">
+                                                                        <i class="fal fa-heart"></i>
+                                                                    </a>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="add-to-compare">
+                                                                    <a href="#compare" title="??????">
+                                                                        <i class="fal fa-random"></i>
+                                                                    </a>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="add-to-cart">
+                                                                    <a href="#cart" title="?????? ?? ???">
+                                                                        <i class="fal fa-shopping-cart"></i>
+                                                                    </a>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="Most-Popular" role="tabpanel"
+                                        aria-labelledby="Most-Popular-tab">
+                                        <div class="col-lg-3 col-md-4 col-xs-12 fr">
+                                            <div class="product-card">
+                                                <div class="product-image-area">
+                                                    <a href="#" class="product-image">
+                                                        <div class="product-label">
+                                                            <span>3%</span>
+                                                        </div>
+                                                        <img src="assets/images/product/apple-iphone8.jpg"
+                                                            alt="product">
+                                                    </a>
+                                                </div>
+                                                <div class="product-detail-area">
+                                                    <div class="price">
+                                                        <del>
+                                                            <span class="price-amount">71,000,000
+                                                                <span class="price-currencySymbol">?????</span>
+                                                            </span>
+                                                        </del>
+                                                        <ins>
+                                                            <span class="price-amount">69,000,000
+                                                                <span class="price-currencySymbol">?????</span>
+                                                            </span>
+                                                        </ins>
+                                                    </div>
+                                                    <h3 class="product-name">
+                                                        <a href="#">???? ?????? ??? ??? iPhone 12 A2404 ?? ???? ????
+                                                            ?????
+                                                            128 ????????</a>
+                                                    </h3>
+                                                    <div class="actions">
+                                                        <div class="star-rating">
+                                                            <span class="star active">
+                                                                <i class="fal fa-star"></i>
+                                                            </span>
+                                                            <span class="star active">
+                                                                <i class="fal fa-star"></i>
+                                                            </span>
+                                                            <span class="star active">
+                                                                <i class="fal fa-star"></i>
+                                                            </span>
+                                                            <span class="star active">
+                                                                <i class="fal fa-star"></i>
+                                                            </span>
+                                                            <span class="star">
+                                                                <i class="fal fa-star"></i>
+                                                            </span>
+                                                        </div>
+                                                        <ul class="add-to-links">
+                                                            <li>
+                                                                <div class="add-to-wishlist">
+                                                                    <a href="#wishlist" title="?????? ?? ????? ???? ??">
+                                                                        <i class="fal fa-heart"></i>
+                                                                    </a>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="add-to-compare">
+                                                                    <a href="#compare" title="??????">
+                                                                        <i class="fal fa-random"></i>
+                                                                    </a>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="add-to-cart">
+                                                                    <a href="#cart" title="?????? ?? ???">
+                                                                        <i class="fal fa-shopping-cart"></i>
+                                                                    </a>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-md-4 col-xs-12 fr">
+                                            <div class="product-card">
+                                                <div class="product-image-area">
+                                                    <a href="#" class="product-image">
+                                                        <div class="product-label">
+                                                            <span>3%</span>
+                                                        </div>
+                                                        <img src="assets/images/product/nikon.jpg" alt="product">
+                                                    </a>
+                                                </div>
+                                                <div class="product-detail-area">
+                                                    <div class="price">
+                                                        <del>
+                                                            <span class="price-amount">71,000,000
+                                                                <span class="price-currencySymbol">?????</span>
+                                                            </span>
+                                                        </del>
+                                                        <ins>
+                                                            <span class="price-amount">69,000,000
+                                                                <span class="price-currencySymbol">?????</span>
+                                                            </span>
+                                                        </ins>
+                                                    </div>
+                                                    <h3 class="product-name">
+                                                        <a href="#">???? ?????? ??? ??? iPhone 12 A2404 ?? ???? ????
+                                                            ?????
+                                                            128 ????????</a>
+                                                    </h3>
+                                                    <div class="actions">
+                                                        <div class="star-rating">
+                                                            <span class="star active">
+                                                                <i class="fal fa-star"></i>
+                                                            </span>
+                                                            <span class="star active">
+                                                                <i class="fal fa-star"></i>
+                                                            </span>
+                                                            <span class="star active">
+                                                                <i class="fal fa-star"></i>
+                                                            </span>
+                                                            <span class="star active">
+                                                                <i class="fal fa-star"></i>
+                                                            </span>
+                                                            <span class="star">
+                                                                <i class="fal fa-star"></i>
+                                                            </span>
+                                                        </div>
+                                                        <ul class="add-to-links">
+                                                            <li>
+                                                                <div class="add-to-wishlist">
+                                                                    <a href="#wishlist" title="?????? ?? ????? ???? ??">
+                                                                        <i class="fal fa-heart"></i>
+                                                                    </a>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="add-to-compare">
+                                                                    <a href="#compare" title="??????">
+                                                                        <i class="fal fa-random"></i>
+                                                                    </a>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="add-to-cart">
+                                                                    <a href="#cart" title="?????? ?? ???">
+                                                                        <i class="fal fa-shopping-cart"></i>
+                                                                    </a>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="newest" role="tabpanel" aria-labelledby="newest-tab">
+                                        <div class="col-lg-3 col-md-4 col-xs-12 fr">
+                                            <div class="product-card">
+                                                <div class="product-image-area">
+                                                    <a href="#" class="product-image">
+                                                        <div class="product-label">
+                                                            <span>3%</span>
+                                                        </div>
+                                                        <img src="assets/images/product/apple-iphone12.webp"
+                                                            alt="product">
+                                                    </a>
+                                                </div>
+                                                <div class="product-detail-area">
+                                                    <div class="price">
+                                                        <del>
+                                                            <span class="price-amount">71,000,000
+                                                                <span class="price-currencySymbol">?????</span>
+                                                            </span>
+                                                        </del>
+                                                        <ins>
+                                                            <span class="price-amount">69,000,000
+                                                                <span class="price-currencySymbol">?????</span>
+                                                            </span>
+                                                        </ins>
+                                                    </div>
+                                                    <h3 class="product-name">
+                                                        <a href="#">???? ?????? ??? ??? iPhone 12 A2404 ?? ???? ????
+                                                            ?????
+                                                            128 ????????</a>
+                                                    </h3>
+                                                    <div class="actions">
+                                                        <div class="star-rating">
+                                                            <span class="star active">
+                                                                <i class="fal fa-star"></i>
+                                                            </span>
+                                                            <span class="star active">
+                                                                <i class="fal fa-star"></i>
+                                                            </span>
+                                                            <span class="star active">
+                                                                <i class="fal fa-star"></i>
+                                                            </span>
+                                                            <span class="star active">
+                                                                <i class="fal fa-star"></i>
+                                                            </span>
+                                                            <span class="star">
+                                                                <i class="fal fa-star"></i>
+                                                            </span>
+                                                        </div>
+                                                        <ul class="add-to-links">
+                                                            <li>
+                                                                <div class="add-to-wishlist">
+                                                                    <a href="#wishlist" title="?????? ?? ????? ???? ??">
+                                                                        <i class="fal fa-heart"></i>
+                                                                    </a>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="add-to-compare">
+                                                                    <a href="#compare" title="??????">
+                                                                        <i class="fal fa-random"></i>
+                                                                    </a>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="add-to-cart">
+                                                                    <a href="#cart" title="?????? ?? ???">
+                                                                        <i class="fal fa-shopping-cart"></i>
+                                                                    </a>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-md-4 col-xs-12 fr">
+                                            <div class="product-card">
+                                                <div class="product-image-area">
+                                                    <a href="#" class="product-image">
+                                                        <div class="product-label">
+                                                            <span>3%</span>
+                                                        </div>
+                                                        <img src="assets/images/product/galaxy-s8.jpg" alt="product">
+                                                    </a>
+                                                </div>
+                                                <div class="product-detail-area">
+                                                    <div class="price">
+                                                        <del>
+                                                            <span class="price-amount">71,000,000
+                                                                <span class="price-currencySymbol">?????</span>
+                                                            </span>
+                                                        </del>
+                                                        <ins>
+                                                            <span class="price-amount">69,000,000
+                                                                <span class="price-currencySymbol">?????</span>
+                                                            </span>
+                                                        </ins>
+                                                    </div>
+                                                    <h3 class="product-name">
+                                                        <a href="#">???? ?????? ??? ??? iPhone 12 A2404 ?? ???? ????
+                                                            ?????
+                                                            128 ????????</a>
+                                                    </h3>
+                                                    <div class="actions">
+                                                        <div class="star-rating">
+                                                            <span class="star active">
+                                                                <i class="fal fa-star"></i>
+                                                            </span>
+                                                            <span class="star active">
+                                                                <i class="fal fa-star"></i>
+                                                            </span>
+                                                            <span class="star active">
+                                                                <i class="fal fa-star"></i>
+                                                            </span>
+                                                            <span class="star active">
+                                                                <i class="fal fa-star"></i>
+                                                            </span>
+                                                            <span class="star">
+                                                                <i class="fal fa-star"></i>
+                                                            </span>
+                                                        </div>
+                                                        <ul class="add-to-links">
+                                                            <li>
+                                                                <div class="add-to-wishlist">
+                                                                    <a href="#wishlist" title="?????? ?? ????? ???? ??">
+                                                                        <i class="fal fa-heart"></i>
+                                                                    </a>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="add-to-compare">
+                                                                    <a href="#compare" title="??????">
+                                                                        <i class="fal fa-random"></i>
+                                                                    </a>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="add-to-cart">
+                                                                    <a href="#cart" title="?????? ?? ???">
+                                                                        <i class="fal fa-shopping-cart"></i>
+                                                                    </a>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="cheapest" role="tabpanel"
+                                        aria-labelledby="cheapest-tab">
+                                        <div class="col-lg-3 col-md-4 col-xs-12 fr">
+                                            <div class="product-card">
+                                                <div class="product-image-area">
+                                                    <a href="#" class="product-image">
+                                                        <div class="product-label">
+                                                            <span>3%</span>
+                                                        </div>
+                                                        <img src="assets/images/product/nikon.jpg" alt="product">
+                                                    </a>
+                                                </div>
+                                                <div class="product-detail-area">
+                                                    <div class="price">
+                                                        <del>
+                                                            <span class="price-amount">71,000,000
+                                                                <span class="price-currencySymbol">?????</span>
+                                                            </span>
+                                                        </del>
+                                                        <ins>
+                                                            <span class="price-amount">69,000,000
+                                                                <span class="price-currencySymbol">?????</span>
+                                                            </span>
+                                                        </ins>
+                                                    </div>
+                                                    <h3 class="product-name">
+                                                        <a href="#">???? ?????? ??? ??? iPhone 12 A2404 ?? ???? ????
+                                                            ?????
+                                                            128 ????????</a>
+                                                    </h3>
+                                                    <div class="actions">
+                                                        <div class="star-rating">
+                                                            <span class="star active">
+                                                                <i class="fal fa-star"></i>
+                                                            </span>
+                                                            <span class="star active">
+                                                                <i class="fal fa-star"></i>
+                                                            </span>
+                                                            <span class="star active">
+                                                                <i class="fal fa-star"></i>
+                                                            </span>
+                                                            <span class="star active">
+                                                                <i class="fal fa-star"></i>
+                                                            </span>
+                                                            <span class="star">
+                                                                <i class="fal fa-star"></i>
+                                                            </span>
+                                                        </div>
+                                                        <ul class="add-to-links">
+                                                            <li>
+                                                                <div class="add-to-wishlist">
+                                                                    <a href="#wishlist" title="?????? ?? ????? ???? ??">
+                                                                        <i class="fal fa-heart"></i>
+                                                                    </a>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="add-to-compare">
+                                                                    <a href="#compare" title="??????">
+                                                                        <i class="fal fa-random"></i>
+                                                                    </a>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="add-to-cart">
+                                                                    <a href="#cart" title="?????? ?? ???">
+                                                                        <i class="fal fa-shopping-cart"></i>
+                                                                    </a>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-md-4 col-xs-12 fr">
+                                            <div class="product-card">
+                                                <div class="product-image-area">
+                                                    <a href="#" class="product-image">
+                                                        <div class="product-label">
+                                                            <span>3%</span>
+                                                        </div>
+                                                        <img src="assets/images/product/pocox3.webp" alt="product">
+                                                    </a>
+                                                </div>
+                                                <div class="product-detail-area">
+                                                    <div class="price">
+                                                        <del>
+                                                            <span class="price-amount">71,000,000
+                                                                <span class="price-currencySymbol">?????</span>
+                                                            </span>
+                                                        </del>
+                                                        <ins>
+                                                            <span class="price-amount">69,000,000
+                                                                <span class="price-currencySymbol">?????</span>
+                                                            </span>
+                                                        </ins>
+                                                    </div>
+                                                    <h3 class="product-name">
+                                                        <a href="#">???? ?????? ??? ??? iPhone 12 A2404 ?? ???? ????
+                                                            ?????
+                                                            128 ????????</a>
+                                                    </h3>
+                                                    <div class="actions">
+                                                        <div class="star-rating">
+                                                            <span class="star active">
+                                                                <i class="fal fa-star"></i>
+                                                            </span>
+                                                            <span class="star active">
+                                                                <i class="fal fa-star"></i>
+                                                            </span>
+                                                            <span class="star active">
+                                                                <i class="fal fa-star"></i>
+                                                            </span>
+                                                            <span class="star active">
+                                                                <i class="fal fa-star"></i>
+                                                            </span>
+                                                            <span class="star">
+                                                                <i class="fal fa-star"></i>
+                                                            </span>
+                                                        </div>
+                                                        <ul class="add-to-links">
+                                                            <li>
+                                                                <div class="add-to-wishlist">
+                                                                    <a href="#wishlist" title="?????? ?? ????? ???? ??">
+                                                                        <i class="fal fa-heart"></i>
+                                                                    </a>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="add-to-compare">
+                                                                    <a href="#compare" title="??????">
+                                                                        <i class="fal fa-random"></i>
+                                                                    </a>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="add-to-cart">
+                                                                    <a href="#cart" title="?????? ?? ???">
+                                                                        <i class="fal fa-shopping-cart"></i>
+                                                                    </a>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="most-expensive" role="tabpanel"
+                                        aria-labelledby="most-expensive-tab">
+                                        <div class="col-lg-3 col-md-4 col-xs-12 fr">
+                                            <div class="product-card">
+                                                <div class="product-image-area">
+                                                    <a href="#" class="product-image">
+                                                        <div class="product-label">
+                                                            <span>3%</span>
+                                                        </div>
+                                                        <img src="assets/images/product/apple-iphone12.webp"
+                                                            alt="product">
+                                                    </a>
+                                                </div>
+                                                <div class="product-detail-area">
+                                                    <div class="price">
+                                                        <del>
+                                                            <span class="price-amount">71,000,000
+                                                                <span class="price-currencySymbol">?????</span>
+                                                            </span>
+                                                        </del>
+                                                        <ins>
+                                                            <span class="price-amount">69,000,000
+                                                                <span class="price-currencySymbol">?????</span>
+                                                            </span>
+                                                        </ins>
+                                                    </div>
+                                                    <h3 class="product-name">
+                                                        <a href="#">???? ?????? ??? ??? iPhone 12 A2404 ?? ???? ????
+                                                            ?????
+                                                            128 ????????</a>
+                                                    </h3>
+                                                    <div class="actions">
+                                                        <div class="star-rating">
+                                                            <span class="star active">
+                                                                <i class="fal fa-star"></i>
+                                                            </span>
+                                                            <span class="star active">
+                                                                <i class="fal fa-star"></i>
+                                                            </span>
+                                                            <span class="star active">
+                                                                <i class="fal fa-star"></i>
+                                                            </span>
+                                                            <span class="star active">
+                                                                <i class="fal fa-star"></i>
+                                                            </span>
+                                                            <span class="star">
+                                                                <i class="fal fa-star"></i>
+                                                            </span>
+                                                        </div>
+                                                        <ul class="add-to-links">
+                                                            <li>
+                                                                <div class="add-to-wishlist">
+                                                                    <a href="#wishlist" title="?????? ?? ????? ???? ??">
+                                                                        <i class="fal fa-heart"></i>
+                                                                    </a>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="add-to-compare">
+                                                                    <a href="#compare" title="??????">
+                                                                        <i class="fal fa-random"></i>
+                                                                    </a>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="add-to-cart">
+                                                                    <a href="#cart" title="?????? ?? ???">
+                                                                        <i class="fal fa-shopping-cart"></i>
+                                                                    </a>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                             </div>
+                                        </div>
+                                        <div class="col-lg-3 col-md-4 col-xs-12 fr">
+                                            <div class="product-card">
+                                                <div class="product-image-area">
+                                                    <a href="#" class="product-image">
+                                                        <div class="product-label">
+                                                            <span>3%</span>
+                                                        </div>
+                                                        <img src="assets/images/product/nikon.jpg" alt="product">
+                                                    </a>
+                                                </div>
+                                                <div class="product-detail-area">
+                                                    <div class="price">
+                                                        <del>
+                                                            <span class="price-amount">71,000,000
+                                                                <span class="price-currencySymbol">?????</span>
+                                                            </span>
+                                                        </del>
+                                                        <ins>
+                                                            <span class="price-amount">69,000,000
+                                                                <span class="price-currencySymbol">?????</span>
+                                                            </span>
+                                                        </ins>
+                                                    </div>
+                                                    <h3 class="product-name">
+                                                        <a href="#">???? ?????? ??? ??? iPhone 12 A2404 ?? ???? ????
+                                                            ?????
+                                                            128 ????????</a>
+                                                    </h3>
+                                                    <div class="actions">
+                                                        <div class="star-rating">
+                                                            <span class="star active">
+                                                                <i class="fal fa-star"></i>
+                                                            </span>
+                                                            <span class="star active">
+                                                                <i class="fal fa-star"></i>
+                                                            </span>
+                                                            <span class="star active">
+                                                                <i class="fal fa-star"></i>
+                                                            </span>
+                                                            <span class="star active">
+                                                                <i class="fal fa-star"></i>
+                                                            </span>
+                                                            <span class="star">
+                                                                <i class="fal fa-star"></i>
+                                                            </span>
+                                                        </div>
+                                                        <ul class="add-to-links">
+                                                            <li>
+                                                                <div class="add-to-wishlist">
+                                                                    <a href="#wishlist" title="?????? ?? ????? ???? ??">
+                                                                        <i class="fal fa-heart"></i>
+                                                                    </a>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="add-to-compare">
+                                                                    <a href="#compare" title="??????">
+                                                                        <i class="fal fa-random"></i>
+                                                                    </a>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="add-to-cart">
+                                                                    <a href="#cart" title="?????? ?? ???">
+                                                                        <i class="fal fa-shopping-cart"></i>
+                                                                    </a>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="togglesidebar filter-sidebar">
+                        <div class="cart-sidebar">
+                            <div class="sidebar-header">
+                                <div class="d-flex align-items-center justify-content-between mb-12">
+                                    
+                                    <div class="cart-sidebar-close close-sidebar" id="sidebar-dismiss-cart">
+                                    
+                                    </div>
+                                </div>
+                            </div>
+                          
+                                
+                    <div class="sidebar-overlay"></div>
+                </div>
+            </div>
+            
+            <div class="paginationMain">
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination">
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#">4</a></li>
+                        <li class="page-item"><a class="page-link" href="#">5</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </main>
+    <!-- content -->
+
+    <!-- scrolltop -->
+    <div class="sticky-toolbox">
+        <ul>
+            <li>
+                <a href="#" class="compare-sticky" title="??????">
+                    <i class="fal fa-exchange"></i>
+                    <span>0</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="cart-sticky" title="??? ????">
+                    <i class="fal fa-shopping-bag"></i>
+                    <span>0</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="scroll-sticky" title="???? ?? ????">
+                    <i class="fal fa-arrow-up"></i>
+                </a>
+            </li>
+        </ul>
+    </div>
+</body>
+
+{% endblock %}
+<!-- JS Implementing Plugins -->
+<script src="{% static 'assets/js/plugins/jquery.nice-select.min.js' %}"></script>
+<script src="{% static 'assets/js/plugins/swiper-bundle.min.js' %}"></script>
+<script src="{% static 'assets/js/plugins/countdown.min.js' %}"></script>
+<script src="{% static 'assets/js/plugins/jquery.countdown.min.js' %}"></script>
+<script src="{% static 'assets/js/plugins/theia-sticky-sidebar.min.js' %}"></script>
+<script src="{% static 'assets/js/plugins/nouislider.min.js' %}"></script>
+<script src="{% static 'assets/js/plugins/wNumb.js' %}"></script>
+<!-- JS Template -->
+<script src="{% static 'assets/js/main.js' %}"></script>
+
+<script>
+    //    price-range
+    var nonLinearStepSlider = document.getElementById('slider-non-linear-step');
+    if ($('#slider-non-linear-step').length) {
+        noUiSlider.create(nonLinearStepSlider, {
+            start: [0, 19000000],
+            connect: true,
+            direction: 'rtl',
+            format: wNumb({
+                decimals: 0,
+                thousand: ','
+            }),
+            range: {
+                'min': [0],
+                '10%': [500, 500],
+                '50%': [40000, 1000],
+                'max': [19000000]
+            }
+        });
+        var nonLinearStepSliderValueElement = document.getElementById('slider-non-linear-step-value');
+
+        nonLinearStepSlider.noUiSlider.on('update', function (values) {
+            nonLinearStepSliderValueElement.innerHTML = values.join(' - ');
+        });
+    }
+</script>
+</html>

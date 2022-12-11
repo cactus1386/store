@@ -1,0 +1,238 @@
+{% load static %}
+<html lang="fa" dir="rtl">
+    <header class="header">
+        <div class="top-page-header">
+            <div class="container">
+                <div class="d-flex align-items-center justify-content-between">
+                    <div class="top-header-menu">
+                        <ul>
+                            <!-- <li><a href="#">?????</a></li> -->
+                            <li><a href="#">تماس با ما</a></li>
+                            <!-- <li><a href="#">??????</a></li> -->
+                            <li><a href="#">پیگیری سفارش</a></li>
+                        </ul>
+                    </div>
+                    <div class="user-items">
+                        <!-- items -->
+                        <div class="user-item account">
+                            <a href="#" class="user-login">
+                                <i class="fal fa-user"></i>
+                                <span class="title">رادین الماسی</span>
+                            </a>
+                            <div class="my-account">
+                                <ul>
+                                    <li class="account-item">
+                                        <a href="#">حساب کاربری</a>
+                                    </li>
+                                    <li class="account-item">
+                                        <a href="#">سبد خرید</a>
+                                    </li>
+                                    <li class="account-item">
+                                        <a href="#">خروج</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- items -->
+                        <div class="user-item cart-list">
+                            <div class="top-icons shop-cart" id="offcanvas-trigger-cart">
+                                <a href="#">
+                                    <i class="fal fa-shopping-bag"></i>
+                                    <div class="cart-title">
+                                        <span>سبد خرید</span>
+                                        <div class="shop-badge header-cart-count">0</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <nav id="offcanvasCart" class="offcanvas offcanvas-cart">
+                        <div class="offcanvas-bar">
+                            <div class="offcanvas-header">
+                                <div class="d-flex align-items-center justify-content-between mb-12">
+                                    <strong>سبد خرید
+                                        <div class="cart-count">0</div>
+                                    </strong>
+                                    <div class="cart-sidebar-close close-sidebar" id="offcanvas-dismiss-cart">
+                                        <i class="fal fa-times"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="offcanvas-shopping-cart-content">
+                                <div class="wrapper">
+                                    <div class="scrollbar" id="style-1">
+                                        <div class="force-overflow">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="offcanvas-footer">
+                                <div class="mini-cart-total total">
+                                    <strong>جمع كل سبد خريد:</strong>
+                                    <span class="price fl">0
+                                        <span class="amount">تومان</span>
+                                    </span>
+                                </div>
+                                <div class="mini-cart-actions">
+                                    <a href="#" class="forward">مشاهده سبد خرید</a>
+                                    <a href="#" class="checkout">تسویه حساب</a>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+
+                    <div class="offcanvas-overlay"></div>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-page-header">
+            <div class="container">
+                <div class="page-header">
+                    <div class="d-flex align-items-center">
+                        <!-- logo -->
+                        <div class="logo">
+                            <a href="/">
+                                <img src="{% static 'assets/images/logo.png' %}" class="img-fluid" alt="logo">
+                            </a>
+                        </div>
+                        <!-- search -->
+                        <div class="search-box">
+                            <form action="#">
+                                <input type="search" id="search-form-text" class="search-field"
+                                    placeholder="کلید واژه مورد نظر...">
+                                <i class="fal fa-search"></i>
+                                <!-- <div class="search-category">
+                                    <div class="custom-select-ui">
+                                        <select class="category">
+                                            <option>????? ???????</option>
+                                            <option>????? ??????</option>
+                                            <option>????? ???????</option>
+                                            <option>????????? ? ?????</option>
+                                            <option>???? ???? ? ????????</option>
+                                            <option>???? ???? ????</option>
+                                            <option>????? ????? ? ???</option>
+                                            <option>???? ? ?????</option>
+                                        </select>
+                                    </div>
+                                </div> -->
+                            </form>
+                        </div>
+                    </div>
+                    <div class="call-number">
+                        <div class="call-number-item">
+                            <strong>12345678</strong>
+                            <span>024</span>
+                            <i class="fal fa-phone"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <nav class="menuMain">
+                <div class="container">
+                    <ul>
+                        <li class="level-0 menuItem">
+                            <a href="/">
+                                <i class="fal fa-home"></i> خانه
+                            </a>
+                        </li>
+                        <li class="level-0 menuItem">
+                            <a href="/page/product">
+                                <i></i> اکشن فیگور
+                            </a>
+                     
+                        </li>
+                        <li class="level-0 menuItem">
+                            <a href="#">
+                                <i></i> فانکو پاپ
+                            </a>
+                        </li>
+                        <li class="level-0 menuItem">
+                            <a href="#">
+                                <i></i> پایه
+                            </a>
+                     
+                        </li>
+                     
+                        <li class="level-0 menuItem">
+                            <a href="/about">
+                                <i></i> درباره ما
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <!-- responsiveMenu -->
+            <nav class="sidebar">
+                <div class="nav-header">
+                    <div class="header-cover"></div>
+                    <div class="logo-wrap">
+                        <a class="logo-icon" href="#">
+                            <img alt="logo-icon" src="{% static 'assets/images/logo.png'%}" width="40">
+                        </a>
+                    </div>
+                </div>
+                <ul class="list-top">
+                    <li><a href="#">تماس باما</a></li>
+                    <li><a href="#">شورتکد</a></li>
+                    <li><a href="#">پیگیری سفارش</a></li>
+                </ul>
+                    <li>
+                        <a href="#" data-toggle="collapse" data-target="#headingFive" aria-expanded="false"
+                            aria-controls="headingFive">
+                            ???? ? ??????
+                            <i class="fal fa-angle-left"></i>
+                        </a>
+                        <div class="collapse" id="headingFive">
+                            <ul>
+                                <li class="has-sub"><a href="#">????? ????? ????</a></li>
+                                <li class="has-sub"><a href="#">???? ??????</a></li>
+                                <li class="has-sub"><a href="#">??????</a></li>
+                            </ul>
+                        </div>
+                    </li>
+            </nav>
+            <div class="nav-btn nav-slider">
+                <span class="linee1"></span>
+                <span class="linee2"></span>
+                <span class="linee3"></span>
+            </div>
+            <div class="overlay"></div>
+        </div>
+        <div class="sticky-toolbar-footer">
+            <svg xmlns="http://www.w3.org/2000/svg" width="82" height="50" viewBox="0 0 82 50">
+                <path
+                    d="M0,50V45H82v5H0ZM0,0.025C0.167,0.017.331,0,.5,0A9.4JUdGzvrMFDWrUUwY3toJATSeNwjn54LkCnKBPRzDuhzi5vSepHfUckJNxRL2gjkNrSqtCoRUrEDAgRwsQvVCjZbRyFTLRNyDmT1a1boZV0c0.169,0,.333.017,0.5,0.025V45H0V0.025Z">
+                </path>
+            </svg>
+            <div class="toolbar-mobile">
+                <div class="toolbar-col scroll-sticky">
+                    <div class="toolbar-item">
+                        <i class="fal fa-arrow-up"></i>
+                    </div>
+                </div>
+                <div class="toolbar-col product">
+                    <a href="#" class="toolbar-item">
+                        <i class="fal fa-store"></i>
+                    </a>
+                </div>
+                <div class="toolbar-col cart">
+                    <a href="#" class="toolbar-item">
+                        <i class="fal fa-shopping-bag"></i>
+                        <span class="count-cart">3</span>
+                    </a>
+                </div>
+                <div class="toolbar-col nav-slider">
+                    <a href="#" class="toolbar-item">
+                        <i class="fal fa-folder-tree"></i>
+                    </a>
+                </div>
+                <div class="toolbar-col account">
+                    <a href="#" class="toolbar-item">
+                        <i class="fal fa-user"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+</html>
