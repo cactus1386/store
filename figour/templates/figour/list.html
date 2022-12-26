@@ -1,0 +1,350 @@
+{% extends "base.html" %}
+{% load static %}
+
+    {% block content %}
+        <body>
+
+            <!-- content -->
+            <main class="content">
+                <div class="container">>
+                    <div class="row mb-3">
+                        <div class="col-lg-8">
+                            <div class="main-slider">
+                                <div class="swiper mySwiper mainSlider">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <a href="#">
+                                                <img src="{% static 'assets/images/sliderM/sliderM1.jpg' %}" class="img-fluid"
+                                                    alt="sliderMain">
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a href="#">
+                                                <img src="{% static 'assets/images/sliderM/sliderM2.jpg' %}" class="img-fluid"
+                                                    alt="sliderMain">
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a href="#">
+                                                <img src="{% static 'assets/images/sliderM/sliderM3.jpg' %}" class="img-fluid"
+                                                    alt="sliderMain">
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a href="#">
+                                                <img src="{% static 'assets/images/sliderM/sliderM4.jpg'%}" class="img-fluid"
+                                                    alt="sliderMain">
+                                            </a>
+                                        <!-- </div>
+                                        <div class="swiper-slide">
+                                            <a href="#">
+                                                <img src="assets/images/sliderM/sliderM5.jpg" class="img-fluid"
+                                                    alt="sliderMain">
+                                            </a> -->
+                                        </div>
+                                    </div>
+                                    <div class="swiper-button-next"></div>
+                                    <div class="swiper-button-prev"></div>
+                                    <div class="swiper-pagination"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="row">
+                                <div class="col-lg-12 col-sm-6 col-12">
+                                    <div class="banner mb-3">
+                                        <a href="#">
+                                            <img src="{% static 'assets/images/banner/banner2.jpg' %}" alt="banner">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-sm-6 col-12">
+                                    <div class="banner">
+                                        <a href="#">
+                                            <img src="{% static 'assets/images/banner/banner3.jpg' %}" alt="banner">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <section class="product-carousel">
+                                <div class="col-lg-12 p-0 fr">
+                                    <div class="block-content-wrap mt-3">
+                                        <div class="swiper mySwiper sliderProduct">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide">
+                                                    <div class="item">
+                                                        <div class="item-area item-general">
+                                                            <div class="product-image-area">
+                                                                <a href="#" class="product-image">
+                                                                    <img src="{% static 'assets/images/sliderN/disney.png'%}">
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="item">
+                                                        <div class="item-area item-general">
+                                                            <div class="product-image-area">
+                                                                <a href="#" class="product-image">
+                                                                    <img src="{% static 'assets/images/sliderN/harry.png'%}">
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="item">
+                                                        <div class="item-area item-general">
+                                                            <div class="product-image-area">
+                                                                <a href="#" class="product-image">
+                                                                    <img src="{% static 'assets/images/sliderN/marvel2.png' %}">
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="item">
+                                                        <div class="item-area item-general">
+                                                            <div class="product-image-area">
+                                                                <a href="#" class="product-image">
+                                                                    <img src="{% static 'assets/images/sliderN/starwars.png' %}">
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="item">
+                                                        <div class="item-area item-general">
+                                                            <div class="product-image-area">
+                                                                <a href="#" class="product-image">
+                                                                    <img src="{% static 'assets/images/sliderN/GAME.jpg' %}">
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="item">
+                                                        <div class="item-area item-general">
+                                                            <div class="product-image-area">
+                                                                <a href="#" class="product-image">
+                                                                    <img src="{% static 'assets/images/sliderN/dc.png'%}">
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            <div class="swiper-button-next"></div>
+                                            <div class="swiper-button-prev"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-9">
+                            <section class="product-carousel">
+                                <div class="product-heading">
+                                    <div class="title">
+                                        <i class="fal fa-layer-plus"></i> جدیـدترین محصـولات
+                                    </div>
+                                    <a href="#" class="view-more">
+                                        <i class="fal fa-angle-left"></i> مشاهده همه
+                                    </a>
+                                </div>
+                                <div class="block-content-wrap mt-3">
+                                    <div class="swiper mySwiper sliderProduct">
+                                        <div class="swiper-wrapper">
+                                        {% for fig in fpfigours %}
+                                        <a href="{% url 'figours:detail' fig.id %}">
+                                            <div class="swiper-slide">
+                                                <div class="item">
+                                                    <div class="item-area item-general">
+                                                        <div class="product-image-area">
+                                                            <a href="{% url 'figours:detail' fig.id %}" class="product-image">
+                                                                <div class="product-label">
+                                                                    <span>{{fig.Discount}}%</span>
+                                                                </div>
+                                                                <img src="{{ fig.photo.url }}" alt="sliderProduct">
+                                                            </a>
+                                                        </div>
+                                                        <div class="product-detail-area">
+                                                            <div class="price">
+                                                                <del>
+                                                                    <span class="price-amount">{{fig.price}}
+                                                                        <span class="price-currencySymbol">تومان</span>
+                                                                    </span>
+                                                                </del>
+                                                                <ins>
+                                                                    <span class="price-amount">{{fig.second_price}}
+                                                                        <span class="price-currencySymbol">تومان</span>
+                                                                    </span>
+                                                                </ins>
+                                                            </div>
+                                                            <h3 class="product-name">
+                                                                <a href="{% url 'figours:detail' fig.id %}">{{fig.name}}
+                                                                    </a>
+                                                            </h3>
+                                                            <div class="actions">
+                                                                <div class="star-rating">
+                                                                    <span class="star active">
+                                                                        <i class="fal fa-star"></i>
+                                                                    </span>
+                                                                    <span class="star active">
+                                                                        <i class="fal fa-star"></i>
+                                                                    </span>
+                                                                    <span class="star active">
+                                                                        <i class="fal fa-star"></i>
+                                                                    </span>
+                                                                    <span class="star active">
+                                                                        <i class="fal fa-star"></i>
+                                                                    </span>
+                                                                    <span class="star">
+                                                                        <i class="fal fa-star"></i>
+                                                                    </span>
+                                                                </div>
+                                                                <ul class="add-to-links">
+                                                                    <li>
+                                                                        <div class="add-to-wishlist">
+                                                                            <a href="#wishlist" title="سبد خرید">
+                                                                                <i class="fal fa-heart"></i>
+                                                                            </a>
+                                                                        </div>
+                                                                    </li>
+
+                                                                    <li>
+                                                                        <div class="add-to-cart">
+                                                                            <a href="#cart" title="رفتن به بالا">
+                                                                                <i class="fal fa-shopping-cart"></i>
+                                                                            </a>
+                                                                        </div>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+
+                                        {% endfor %}
+                                        </div>
+                                        <div class="swiper-button-next"></div>
+                                        <div class="swiper-button-prev"></div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                        <div class="col-lg-3 p-0 d-inline-block">
+                            <a href="#" class="specials-title">
+                                <img src="{% static 'assets/images/sliderP/banner-t1.png' %}" alt="sliderProduct">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <section class="product-carousel">
+                                <div class="col-lg-3 p-0 d-inline-block">
+                                    <a href="#" class="specials-title">
+                                        <img src="{% static 'assets/images/sliderP/banner-t1.png' %}" alt="sliderProduct">
+                                    </a>
+                                </div>
+                                <div class="col-lg-9 col-md-12 col-xs-12 p-0 fl">
+                                    <div class="block-content-wrap mt-3">
+                                        <div class="swiper mySwiper sliderProduct">
+                                            <div class="swiper-wrapper">
+                                                {% for fig in por %}
+                                                <a href="{% url 'figours:detail' fig.id %}">
+                                                    <div class="swiper-slide">
+                                                        <div class="item">
+                                                            <div class="item-area item-general">
+                                                                <div class="product-image-area">
+                                                                    <a href="#" class="product-image">
+                                                                        <div class="product-label">
+                                                                            <span>{{fig.Discount}}%</span>
+                                                                        </div>
+                                                                        <img src="{{ fig.photo.url }}" alt="sliderProduct">
+                                                                    </a>
+                                                                </div>
+                                                                <div class="product-detail-area">
+                                                                    <div class="price">
+                                                                        <del>
+                                                                            <span class="price-amount">{{fig.price}}
+                                                                                <span class="price-currencySymbol">تومان</span>
+                                                                            </span>
+                                                                        </del>
+                                                                        <ins>
+                                                                            <span class="price-amount">{{fig.second_price}}
+                                                                                <span class="price-currencySymbol">تومان</span>
+                                                                            </span>
+                                                                        </ins>
+                                                                    </div>
+                                                                    <h3 class="product-name">
+                                                                        <a href="#">{{fig.name}}
+                                                                            </a>
+                                                                    </h3>
+                                                                    <div class="actions">
+                                                                        <div class="star-rating">
+                                                                            <span class="star active">
+                                                                                <i class="fal fa-star"></i>
+                                                                            </span>
+                                                                            <span class="star active">
+                                                                                <i class="fal fa-star"></i>
+                                                                            </span>
+                                                                            <span class="star active">
+                                                                                <i class="fal fa-star"></i>
+                                                                            </span>
+                                                                            <span class="star active">
+                                                                                <i class="fal fa-star"></i>
+                                                                            </span>
+                                                                            <span class="star">
+                                                                                <i class="fal fa-star"></i>
+                                                                            </span>
+                                                                        </div>
+                                                                        <ul class="add-to-links">
+                                                                            <li>
+                                                                                <div class="add-to-wishlist">
+                                                                                    <a href="#wishlist" title="سبد خرید">
+                                                                                        <i class="fal fa-heart"></i>
+                                                                                    </a>
+                                                                                </div>
+                                                                            </li>
+        
+                                                                            <li>
+                                                                                <div class="add-to-cart">
+                                                                                    <a href="#cart" title="رفتن به بالا">
+                                                                                        <i class="fal fa-shopping-cart"></i>
+                                                                                    </a>
+                                                                                </div>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </a>
+        
+                                                {% endfor %}
+                                            </div>
+                                            <div class="swiper-button-next"></div>
+                                            <div class="swiper-button-prev"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+
+    {% endblock content %}
